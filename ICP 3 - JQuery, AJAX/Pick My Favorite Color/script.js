@@ -9,31 +9,31 @@ function setPreviewColor(color) {
 function addBox(colorCode, colorContainer) {
   colorToAdd = document.createElement('div');
   colorToAdd.setAttribute('style', `background-color:${colorCode}`);
-  colorToAdd.style.backgroundC = colorCode;
+  colorToAdd.setAttribute('class', 'color_blocks')
   colorContainer.appendChild(colorToAdd);
+  // clear input value
+  $("#color").val("");
 }
 
 $(document).ready(function(){
 
-    //1.As the page loads add each color in the colors array to the div '#colors'
-
-
-//set the preview color to one of the colors in the colors array randomly
+    // display random color from colors array on pageload
     setPreviewColor(colors[Math.floor(Math.random()*colors.length)]);
-    // an event handler for the key up event i.e. when the user types the color in the input and releases the key on the keyboard
-//The event should set the preview color to the color typed in the input
+    // set preview color when typed in input
     $(document).on('keydown keyup keypress', '#color', function(){
         color = $(this).val();
         setPreviewColor(color);
     })
-//2.Write an event handler to handle the click the event on the add to favorite button so that the color gets added to the list of favorite colors,
-// the content of the input gets cleared and the focus gets back on the input
+    // Add color to favorites and clear input
     $(document).on('click', '#add-to-favorite', function() {
       colorCode = $("#color").val();
       colorContainer = document.getElementById('colors')
       addBox(colorCode, colorContainer);
     })
 
-//3.Write events handlers such that whenever any item in the favorite colors is clicked or hovered, the color gets displayed in the preview div
-
+    // Change color of preview on hover/mousover of favorite colors:
+    $(document).on('click mouseover', '.color_blocks', function () {
+      color = $(this).css('background-color');
+      setPreviewColor(color);
+    });
 });
