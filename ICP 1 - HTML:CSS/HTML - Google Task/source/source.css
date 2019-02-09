@@ -1,0 +1,38 @@
+body {
+  background-color: #068587;
+  color: #FFFFFF;
+  font-family: 'Inconsolata', monospace;
+}
+
+h1, h3 {
+  color: #FFFFFF;
+}
+
+h2 {
+  text-align: center;
+}
+
+li {
+  margin: 10px 0;
+  color: #FFFFFF;
+}
+
+span {
+  font-weight: bold;
+}
+
+img {
+  width: 500px;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+#container {
+  margin-left: 27vw;
+}
+
+.step {
+  width: 60%;
+}
