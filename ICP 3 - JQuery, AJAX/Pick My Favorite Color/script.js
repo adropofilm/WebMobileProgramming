@@ -6,19 +6,16 @@ function setPreviewColor(color) {
     $('.color-code').text($('.preview').css('background-color'));
 }
 //adds color boxes to the favorite colors
-function addBox(color) {
-    $('#colors').prepend("<div class='item' style='background-color: " + color + ";'><div>");
+function addBox(colorCode, colorContainer) {
+  colorToAdd = document.createElement('div');
+  colorToAdd.setAttribute('style', `background-color:${colorCode}`);
+  colorToAdd.style.backgroundC = colorCode;
+  colorContainer.appendChild(colorToAdd);
 }
-
 
 $(document).ready(function(){
 
     //1.As the page loads add each color in the colors array to the div '#colors'
-    var colorsLen = colors.length;
-    for (var i = 0; i < colorsLen; i++) {
-        alert(myStringArray[i]);
-        //Do something
-    }
 
 
 //set the preview color to one of the colors in the colors array randomly
@@ -31,6 +28,11 @@ $(document).ready(function(){
     })
 //2.Write an event handler to handle the click the event on the add to favorite button so that the color gets added to the list of favorite colors,
 // the content of the input gets cleared and the focus gets back on the input
+    $(document).on('click', '#add-to-favorite', function() {
+      colorCode = $("#color").val();
+      colorContainer = document.getElementById('colors')
+      addBox(colorCode, colorContainer);
+    })
 
 //3.Write events handlers such that whenever any item in the favorite colors is clicked or hovered, the color gets displayed in the preview div
 
