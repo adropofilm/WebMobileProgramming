@@ -23,7 +23,7 @@ function showUser(response) {
     `<ul>
       <li> Name: ${user.name} </li>
       <li> ID: ${user.id} </li>
-      <li> Link: ${user.url} </li>
+      <li> <a href=${user.html_url}> Github Link</a> </li>
     </ul>
     `;
     const avatar = document.getElementById('avatar').innerHTML =
