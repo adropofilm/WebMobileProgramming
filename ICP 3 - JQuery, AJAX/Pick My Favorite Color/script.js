@@ -9,7 +9,7 @@ function setPreviewColor(color) {
 function addBox(colorCode, colorContainer) {
   colorToAdd = document.createElement('div');
   colorToAdd.setAttribute('style', `background-color:${colorCode}`);
-  colorToAdd.setAttribute('class', 'color_blocks')
+  colorToAdd.setAttribute('class', 'color_blocks');
   colorContainer.appendChild(colorToAdd);
   // clear input value
   $("#color").val("");
