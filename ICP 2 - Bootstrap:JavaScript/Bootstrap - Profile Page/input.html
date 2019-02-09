@@ -12,52 +12,50 @@ TODO:
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <link rel="stylesheet" type="text/css" href="source/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="source/style.css"
 </head>
 <body>
-<div id="container">
+<div class="container">
 
-    <div id="header">
-        <div><img src="source/tenor.gif"></div>
+    <div class="row name_row">
+        <div class="profile_pic"><img src="source/tenor.gif"></div>
         <div id="role">
-            <h1>Fatima Mohamed</h1>
-            <h3>Software Engineer</h3>
+            <h1 class="header">FATIMA MOHAMED</h1>
+            <h3 class="header_two">SOFTWARE ENGINEER</h3>
         </div>
     </div>
 
-    <div id="middle_body">
-        <img src="source/cat.jpg">
-    </div>
-    <div>
-        <h2>Featured Work </h2>
+    <div class="row">
+        <img src="source/cat.jpg" class="col-md-12">
     </div>
 
-    <div id="project_nav">
-        <div>
-            <div>
-                <img src="source/anime.jpg">
+    <div class="row">
+        <h2 class="smaller_header"> FEATURED WORK </h2>
+    </div>
+
+    <div class="row images">
+            <div class="col-md-3">
+                <img src="source/anime.jpg" class="image">
                 <h3>ICP1</h3>
                 <p><a href="https://github.com/adropofilm/applied_programming_learning">Link to project</a></p>
             </div>
-            <div>
-                <img src="source/images.jpeg">
+            <div class="col-md-3">
+                <img src="source/images.jpeg" class="image">
                 <h3>ICP2 - Rock Paper Scissors</h3>
                 <p><a href="https://github.com/adropofilm/ICP2/tree/master/1_rps_game">Link to project</a></p>
             </div>
-        </div>
-
-        <div>
-            <div>
-                <img src="source/anime2.jpeg">
+            <div class="col-md-3">
+                <img src="source/anime2.jpeg" class="image">
                 <h3>ICP2 - RWD Task 1 </h3>
                 <p><a href="https://github.com/adropofilm/ICP2/tree/master/2_bootstrap">Link to project</a></p>
             </div>
-            <div>
-                <img src="source/anime3.jpg">
+            <div class="col-md-3">
+                <img src="source/anime3.jpg" class="image">
                 <h3>ICP2 - RWD Task 2</h3>
                 <p><a href=" ">Link to project</a></p>
             </div>
-        </div>
     </div>
 
 </div>

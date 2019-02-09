@@ -1,28 +1,28 @@
-#container {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 15% 40% 40%;
+body {
+  font-family: 'Lato', sans-serif;
+  color: #747704;
 }
 
-#header {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    display: flex;
+
+.header_two {
+  font-size: 1.5em;
 }
 
-#middle_body {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 4;
+.smaller_header {
+  color: #BCBBBB;
+  font-size: 1.3em;
 }
 
-#project_nav {
-    display: flex;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
+.name_row {
+  border-bottom: 2px solid #747704;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: space-between;
 }
+
+.image {
+  max-width: 277.5px;
+  max-height: 150px;
+}
+
+555x300
