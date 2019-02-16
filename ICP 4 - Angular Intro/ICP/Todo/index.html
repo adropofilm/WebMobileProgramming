@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularTodo">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do For 2019</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body ng-controller="app-root">
+<div class="container">
+    <h1>To Do List for 2019</h1>
+    <div class="todo-list">
+        <form class="todo-list__head" ng-submit="addNewItem(item)">
+            <input type="text" class="todo-list-head__text-input" placeholder="Please enter a new task" ng-model="item.name">
+            <button type="submit" class="toto-list-head__submit"><i class="fas fa-user-plus"></i></button>
+        </form>
+        <ul class="todo-list__items">
+            <li ng-repeat="item in items" ng-class="{completed: item.completed}">
+                <span>{{$index + 1}}</span>
+                    {{item.name}}
+                <button class="todo-list-item__complete" ng-click="completeItem($index)"><i class="far fa-check-circle"></i></button>
+                <button class="todo-list-item__trash" ng-click="deleteTodo($index)"><i class="fas fa-trash"></i></button>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
