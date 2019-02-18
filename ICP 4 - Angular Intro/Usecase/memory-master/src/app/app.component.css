@@ -1,0 +1,16 @@
+ /* highlight col-* */
+ .row [class*='col-'] {
+    text-align: center;
+    /*background-color: #cceeee;
+    background-clip: content-box; */
+    min-height: 90px;
+    margin-bottom: 15px;
+  }
+  
+.fa{
+    font-size: 6em !important;
+}
+:host {
+  background-color: pink;
+  display: block;
+}

@@ -1,0 +1,34 @@
+.calculator {
+  display:flex;
+  flex-wrap:wrap;
+  width: 400px;
+ }
+
+#results {
+  width:100%;
+  height:100px;
+  padding: 0 0 0 25px;
+  background:#F28C81;
+  font-size:1.75em;
+  line-height:150px;
+}
+
+.buttons {
+  display:flex;
+  flex-wrap:wrap;
+  height:300px;
+  width:100%
+}
+
+.button {
+  background: #8AC6BF;
+  text-align:center;
+  font-size:1em;
+  height:20%;
+  width:25%
+}
+
+.equal {
+  width: 75%;
+  background-color: #F0E5D6;
+}
