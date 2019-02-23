@@ -1,0 +1,57 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+<div id="container">
+  <table style="width:60%">
+    <tr>
+      <td>
+        <div id="choose_container">
+          <div id="from_choose">
+            <select [(ngModel)]="languageFrom">
+              <option *ngFor="let language of languages" value= {{language.langCode}}>
+                {{language.name}}
+              </option>
+            </select>
+          </div>
+          <div id="to_choose">
+            <select [(ngModel)]="languageTo">
+              <option *ngFor="let language of languages" value= {{language.langCode}}>
+                {{language.name}}
+              </option>
+            </select>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id="form_container">
+          <form onsubmit="submit()">
+            <div class="input-group">
+              <input type="text" class="form-control" #translateText placeholder="Enter text...">
+              <button type="button" class="btn btn-info" (click)="submit()">translate</button><br>
+                <i class="fa fa-search"></i>
+              </div>
+          </form>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="height:50px;">
+        <div class="container wiki-pages">
+          <ul class="translation">
+              <li class="list-group-item">
+                  <p>{{translation}}</p>
+              </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+<router-outlet></router-outlet>

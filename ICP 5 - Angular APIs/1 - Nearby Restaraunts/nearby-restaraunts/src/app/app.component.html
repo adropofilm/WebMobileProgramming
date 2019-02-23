@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}
+  </h1>
+
+  <form onsubmit="submit()">
+    <div class="input-group">
+      <input type="text" class="form-control" #searchText placeholder="Enter Zipcode..">
+      <button type="button" class="btn btn-info" (click)="submit()">search</button><br>
+        <i class="fa fa-search"></i>
+      </div>
+  </form>
+
+  <div class="container wiki-pages">
+    <ul class="list-group" *ngFor="let page of pages">
+        <li class="list-group-item">
+            <h4>{{page.venue.name}}</h4>
+            <p>{{page.venue.location.formattedAddress}}</p>
+        </li>
+    </ul>
+  </div>
+
+
+</div>
