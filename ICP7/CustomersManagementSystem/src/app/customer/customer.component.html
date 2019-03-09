@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-padding col-lg-3 col-md-4 col-sm-6">
+      <div class="card add-customer">
+        <div class="card-body">
+          <div class="dotted-circle">
+            <svg class="icon-plus">
+              <use xlink:href="assets/iconic/sprite.min.svg#plus" class="icon-plus"></use>
+            </svg>
+          </div>
+          <span class="add-customer-label"><a href="#/customer-add">Add customer</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-padding col-lg-3 col-md-4 col-sm-6" *ngFor="let customer of customers">
+      <div class="card" [routerLink]="['/customer-details/', customer._id]">
+        <div class="card-body">
+          <img *ngIf="customer.gender === 'm'; else femaleAvatar" class="avatar" src="assets/male-avatar.svg"/>
+          <ng-template #femaleAvatar>
+            <img class="avatar" src="assets/female-avatar.svg"/>
+          </ng-template>
+          <span class="customer-name">{{customer.name.first}} {{customer.name.last}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

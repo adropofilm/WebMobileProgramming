@@ -1,0 +1,44 @@
+.col-padding {
+    padding: 20px;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.avatar {
+    height: 4rem;
+    width: 4rem;
+    flex: 2;
+}
+
+.customer-name {
+    padding: 0 10px;
+    flex: 3;
+}
+
+.icon-plus {
+    fill: #007bff;
+    height: 1rem;
+    text-align: center;
+
+}
+
+.add-customer.card {
+    border: 1px dashed #007bff;
+}
+
+.dotted-circle {
+    border: 1px dashed #007bff;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.add-customer-label {
+    padding: 0 10px;
+}

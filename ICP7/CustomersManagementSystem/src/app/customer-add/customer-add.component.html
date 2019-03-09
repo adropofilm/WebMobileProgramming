@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="control-label">First Name</label>
+        <input type="text" class="form-control" formControlName="firstName"
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Last Name</label>
+        <input type="text" class="form-control" formControlName="lastName"
+          [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Gender</label>
+        <input type="text" class="form-control" formControlName="gender"
+          [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
+        <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+            <div *ngIf="f.gender.errors.required">Gender is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Birthday</label>
+        <input type="text"
+          formControlName="birthday"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.birthday.errors }"
+          bsDatepicker>
+        <div *ngIf="submitted && f.birthday.errors" class="invalid-feedback">
+            <div *ngIf="f.birthday.errors.required">Birthday is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Last contact date</label>
+        <input type="text" class="form-control" formControlName="lastContact"
+          [ngClass]="{ 'is-invalid': submitted && f.lastContact.errors }">
+        <div *ngIf="submitted && f.lastContact.errors" class="invalid-feedback">
+            <div *ngIf="f.lastContact.errors.required">Last contacted date is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Customer life time</label>
+        <input type="number" class="form-control" formControlName="customerLifetimeValue"
+          [ngClass]="{ 'is-invalid': submitted && f.customerLifetimeValue.errors }">
+        <div *ngIf="submitted && f.customerLifetimeValue.errors" class="invalid-feedback">
+            <div *ngIf="f.customerLifetimeValue.errors.required">Life time value is required</div>
+        </div>
+      </div>
+      <button class="btn btn-default" type="button" (click)="onReset()">Reset</button>
+      <button class="btn btn-primary pull-right" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

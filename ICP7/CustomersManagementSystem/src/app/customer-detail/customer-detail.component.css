@@ -1,0 +1,37 @@
+.user-name {
+    padding-top: 10px; 
+}
+
+.customer-detail-container {
+    padding-top: 20px; 
+}
+
+.list-all {
+    padding: 10px 0;
+}
+
+.icon-svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.btn {
+    width: 60px;
+    margin-right: 20px; 
+}
+
+.icon-trash {
+    fill: #dc3545;
+}
+
+.icon-pencil, .icon-list {
+    fill: #007bff;
+}
+
+.icon-list {
+    vertical-align: middle;
+}
+
+.btn:hover .icon-trash, .btn:hover .icon-pencil, .btn:hover .icon-list {
+    fill: #fff;
+}
