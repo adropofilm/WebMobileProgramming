@@ -56,7 +56,7 @@ export class CustomerEditComponent implements OnInit {
     return this.customerForm.controls;
   }
 
-  onSubmit() {
+  onSubmit(form:NgForm) {
     /*** On form submit update the customer details*/
     let customer: object = {};
     customer['customerID'] = this.id;
@@ -70,12 +70,16 @@ export class CustomerEditComponent implements OnInit {
     customer['customerLifetimeValue'] = this.customerForm.value.customerLifetimeValue;
     console.log(customer);
 
-    this.api.updateCustomer(this.id, customer)
+    this.api.updateCustomer(this.id, form)
       .subscribe(res => {
         let id = res['_id'];
         this.router.navigate(['/customer-details', id]);
       }, (err) => {
         console.log(err);
       });
+  }
+
+  customerDetails() {
+    this.router.navigate(['/customer-details', this.id]);
   }
 }
