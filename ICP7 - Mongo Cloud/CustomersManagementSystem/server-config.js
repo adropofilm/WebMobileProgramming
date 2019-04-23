@@ -5,11 +5,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-var apiRouter = require('./routes/customer');
+var apiRouter = require('./routes/user');
 
 var app = express();
 
-mongoose.connect('mongodb://lesson7:lesson7@ds135540.mlab.com:35540/crud-mean-app', {promiseLibrary: require('bluebird')})
+mongoose.connect('mongodb+srv://mongodb:mongodb@icp7-cw51b.mongodb.net/test?retryWrites=true', {promiseLibrary: require('bluebird')})
   .then(() => console.log('connection successful'))
   .catch((err) => console.error(err));
 

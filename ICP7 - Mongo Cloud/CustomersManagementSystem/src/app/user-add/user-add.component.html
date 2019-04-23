@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="control-label">First Name</label>
+        <input type="text" class="form-control" formControlName="firstName"
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Last Name</label>
+        <input type="text" class="form-control" formControlName="lastName"
+          [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Username</label>
+        <input type="text" class="form-control" formControlName="username"
+          [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">password</label>
+        <input type="text" class="form-control" formControlName="password"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">password is required</div>
+        </div>
+      </div>
+      <button class="btn btn-default" type="button" (click)="onReset()">Reset</button>
+      <button class="btn btn-primary pull-right" type="submit">Submit</button>
+    </form>
+  </div>
+</div>

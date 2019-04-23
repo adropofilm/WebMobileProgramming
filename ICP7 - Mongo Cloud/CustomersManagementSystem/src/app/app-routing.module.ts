@@ -2,35 +2,35 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 
-import {CustomerComponent} from './customer/customer.component';
-import {CustomerDetailComponent} from './customer-detail/customer-detail.component';
-import {CustomerAddComponent} from './customer-add/customer-add.component';
-import {CustomerEditComponent} from './customer-edit/customer-edit.component';
+import {UserComponent} from './user/user.component';
+import {UserDetailComponent} from './user-detail/user-detail.component';
+import {UserAddComponent} from './user-add/user-add.component';
+import {UserEditComponent} from './user-edit/user-edit.component';
 
 const appRoutes: Routes = [
   {
-    path: 'customers',
-    component: CustomerComponent,
-    data: {title: 'Customers List'}
+    path: 'users',
+    component: UserComponent,
+    data: {title: 'Users List'}
   },
   {
-    path: 'customer-details/:id',
-    component: CustomerDetailComponent,
-    data: {title: 'Customer Details'}
+    path: 'user-details/:id',
+    component: UserDetailComponent,
+    data: {title: 'User Details'}
   },
   {
-    path: 'customer-add',
-    component: CustomerAddComponent,
-    data: {title: 'Add Customer'}
+    path: 'user-add',
+    component: UserAddComponent,
+    data: {title: 'Add User'}
   },
   {
-    path: 'customer-edit/:id',
-    component: CustomerEditComponent,
+    path: 'user-edit/:id',
+    component: UserEditComponent,
     data: {title: 'Edit Book'}
   },
   {
     path: '',
-    redirectTo: '/customers',
+    redirectTo: '/users',
     pathMatch: 'full'
   }
 ];

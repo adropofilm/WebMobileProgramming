@@ -1,0 +1,44 @@
+<div class="container user-detail-container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-sm-12 offset-sm-0">
+      <div class="list-all">
+        <a href="#" class="btn btn-outline-primary" [routerLink]="['/users']">
+          <svg class="icon-svg icon-list">
+            <use xlink:href="assets/iconic/sprite.min.svg#list" class="icon-list"></use>
+          </svg>
+        </a>
+        <span class="btn-outline-primary">List all users</span>
+      </div>
+      <div class="card">
+        <div class="card-header text-center">
+          <img class="avatar" src="assets/female-avatar.svg"/>
+          <ng-template #femaleAvatar>
+            <img class="avatar" src="assets/female-avatar.svg"/>
+          </ng-template>
+          <h5 class="user-name">{{user.name?.first}} {{user.name?.last}}</h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="card-text"><small class="text-muted">Username</small></div>
+              <p>{{user.username | date}}</p>
+              <div class="card-text"><small class="text-muted">Password</small></div>
+              <p>{{user.password}}</p>
+            </div>
+        </div>
+        <div class="card-footer bg-transparent">
+          <a href="#" class="btn btn-outline-primary" [routerLink]="['/user-edit', user._id]">
+            <svg class="icon-svg icon-pencil">
+              <use xlink:href="assets/iconic/sprite.min.svg#pencil" class="icon-pencil"></use>
+            </svg>
+          </a>
+          <a href="#" class="btn btn-outline-danger" (click)="deleteUser(user._id)">
+            <svg class="icon-svg icon-trash">
+              <use xlink:href="assets/iconic/sprite.min.svg#trash" class="icon-trash"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

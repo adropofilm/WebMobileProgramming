@@ -5,20 +5,20 @@ import {HttpClientModule} from '@angular/common/http';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 
 import {AppComponent} from './app.component';
-import {CustomerComponent} from './customer/customer.component';
+import {UserComponent} from './user/user.component';
 import {AppRoutingModule} from './app-routing.module';
 import {AngularMaterialModule} from './angular-material/angular-material.module';
-import {CustomerDetailComponent} from './customer-detail/customer-detail.component';
-import {CustomerAddComponent} from './customer-add/customer-add.component';
-import {CustomerEditComponent} from './customer-edit/customer-edit.component';
+import {UserDetailComponent} from './user-detail/user-detail.component';
+import {UserAddComponent} from './user-add/user-add.component';
+import {UserEditComponent} from './user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent,
-    CustomerDetailComponent,
-    CustomerAddComponent,
-    CustomerEditComponent
+    UserComponent,
+    UserDetailComponent,
+    UserAddComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

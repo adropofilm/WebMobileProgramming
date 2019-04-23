@@ -36,27 +36,27 @@ export class ApiService {
     return body || {};
   }
 
-  getCustomers(): Observable<any> {
+  getUsers(): Observable<any> {
     return this.http.get(apiUrl, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
-  getCustomer(id: string): Observable<any> {
+  getUser(id: string): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.get(url, httpOptions).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
-  postCustomer(data): Observable<any> {
+  postUser(data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );
   }
 
-  updateCustomer(id: string, data): Observable<any> {
+  updateUser(id: string, data): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.put(url, data, httpOptions)
       .pipe(
@@ -64,7 +64,7 @@ export class ApiService {
       );
   }
 
-  deleteCustomer(id: string): Observable<{}> {
+  deleteUser(id: string): Observable<{}> {
     const url = `${apiUrl}/${id}`;
     return this.http.delete(url, httpOptions)
       .pipe(
