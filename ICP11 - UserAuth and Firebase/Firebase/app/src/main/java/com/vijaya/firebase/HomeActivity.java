@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -151,5 +153,12 @@ public class HomeActivity extends AppCompatActivity {
 
         if (!TextUtils.isEmpty(phone))
             mFirebaseDatabase.child(userId).child("phone").setValue(phone);
+    }
+
+    // ICP To do:
+    private void logOut(View v){ // Logout function added
+        Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
