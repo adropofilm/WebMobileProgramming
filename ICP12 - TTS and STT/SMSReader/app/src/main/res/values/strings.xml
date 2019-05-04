@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SMSReader</string>
+    <string name="sms_label">Latest SMS</string>
+    <string name="none">None</string>
+    <string name="speech_toggle_on">START SPEAKING</string>
+    <string name="speech_toggle_off">STOP SPEAKING</string>
+    <string name="hello">Hello!</string>
+    <string name="help">How can I help you?</string>
+    <string name="start_speaking">What is your name?</string>
+    <string name="stop_speaking">Okay! I will stay silent now.</string>
+
+    <string name="not_feeling_good">I can understand. Please tell your symptoms in short.</string>
+    <string name="fever">I think you have fever. Please take this medicine.</string>
+
+</resources>
