@@ -18,7 +18,9 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 import android.widget.CompoundButton;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private final int LONG_DURATION = 5000;
     private final int SHORT_DURATION = 1200;
     private static final int REQ_CODE_SPEECH_INPUT = 100;
-
+    private String currentTime;
     private Speaker speaker;
 
     private ToggleButton toggle;
@@ -172,5 +174,17 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         unregisterReceiver(smsReceiver);
         speaker.destroy();
+    }
+
+    private void getTime() {
+        SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm"); //dd/MM/yyyy
+        Date now = new Date();
+        String[] strDate = sdfDate.format(now).split(":");
+
+        if(strDate[1].contains("00")) {
+            strDate[1] = "o'clock";
+        }
+
+        currentTime = sdfDate.format(now);
     }
 }
